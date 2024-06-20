@@ -1,0 +1,55 @@
+/* Styles for hamburger icon */
+.navbar-toggler {
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    transition: all 0.3s;
+    position: relative;
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    transition: all 0.3s;
+    position: absolute;
+}
+
+.navbar-toggler-icon::before {
+    top: -10px;
+}
+
+.navbar-toggler-icon::after {
+    bottom: -10px;
+}
+
+/* When toggler is active */
+.navbar-toggler.active .navbar-toggler-icon {
+    background-color: transparent;
+}
+
+.navbar-toggler.active .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.navbar-toggler.active .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+
+.navigation-list:hover {
+    text-decoration: underline;
+}
